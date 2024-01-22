@@ -1,0 +1,67 @@
+{
+    "1" : {
+        "name": "Premier League Winner",
+        "question": "Who will win the Premier League?",
+        "options": [
+            {
+                "id": 1,
+                "text": "Manchester City",
+                "votes": 49
+            }, {
+                "id": 2,
+                "text": "Arsenal",
+                "votes": 23
+            }, {
+                "id": 3,
+                "text": "Liverpool",
+                "votes": 25
+            }, {
+                "id": 4,
+                "text": "Other",
+                "votes": 15
+            }
+        ]
+    },
+    "2" : {
+        "name": "F1 World Championships Winner",
+        "question": "Which driver win the Formula One World Championship?",
+        "options": [
+            {
+                "id": 1,
+                "text": "Max Verstappen",
+                "votes": 56
+            }, {
+                "id": 2,
+                "text": "Lewis Hamilton",
+                "votes": 61
+            }, {
+                "id": 3,
+                "text": "Sergio Perez",
+                "votes": 38
+            }, {
+                "id": 4,
+                "text": "Fernando Alonso",
+                "votes": 45
+            }, {
+                "id": 5,
+                "text": "Other",
+                "votes": 18
+            }
+        ]
+    },
+    "3" : {
+        "name": "Darts Championship",
+        "question": "Will Luke Littler win the PDC World Darts Championship?",
+        "options": [
+            {
+                "id": 1,
+                "text": "Yes",
+                "votes": 186
+            }, {
+                "id": 2,
+                "text": "No",
+                "votes": 45
+            }
+        ]
+    }
+}

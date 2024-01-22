@@ -1,0 +1,13 @@
+<%- include('common/header'); -%>
+
+<% if (polls != null) { %>
+    <ul>
+        <% for (const id in polls) { %>
+            <li><a href="/vote/<%=id%>"><%= polls[id].name %></a></li>
+        <% } %>
+    </ul>
+<% } else { %>
+    <p>Sorry, no polls could not be found</p>
+<% } %>
+
+<%- include('common/footer'); -%>
