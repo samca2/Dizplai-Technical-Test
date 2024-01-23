@@ -4,9 +4,14 @@
 <head>
     <meta charset="utf-8">
     <!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
-    <link rel="stylesheet" href="static/styling/style.css">
+    <link rel="stylesheet" href="//localhost:3000/static/styling/style.css">
     <title> <%= title %> </title>
 </head>
 
 <body>
-    <img src="static/images/logo.png"></img>
+    <% if (title != "Home") { %> 
+        <button id="return"><a href="//localhost:3000/">Return to Polls</a></button>
+    <% } %>
+    <img src="//localhost:3000/static/images/logo.png"></img>
+
+<!-- body and html are closed in common/footer.ejs -->

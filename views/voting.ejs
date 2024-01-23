@@ -1,0 +1,15 @@
+<%- include('common/header'); -%>
+
+<h1><%=poll.name%></h1>
+
+<form action="" method="post">
+    <% for (id in poll.options) { %>
+        <% const option = poll.options[id] %>
+        <label><%option.name%>
+            <input type="radio" name="optionId" value="<%=id%>"><%=option.text%></input>
+        </label>
+    <% } %>
+    <button type="submit"></button>
+</form>
+
+<%- include('common/footer'); -%>

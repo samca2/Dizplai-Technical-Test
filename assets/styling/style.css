@@ -1,4 +1,4 @@
 body {
-    background-image: url(/static/images/background.jpg);
+    background-image: url(//localhost:3000/static/images/background.jpg);
 }
 
