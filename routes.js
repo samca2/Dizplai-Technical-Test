@@ -25,7 +25,7 @@ exports.vote = (req, res) => {
     // increment votes for selected option of current poll
     req.app.locals.polls[pollId].options[optionId].votes += 1
 
-    //res.redirect(redirectUrl)
+    res.redirect(redirectUrl)
 }
 
 exports.results = (req, res) => {
