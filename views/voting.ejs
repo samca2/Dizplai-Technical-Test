@@ -1,17 +1,25 @@
 <%- include('common/header'); -%>
 
-<h1><%=poll.name%></h1>
+<% if (poll == undefined) { %>
+    <h1>Sorry, this poll could not be found</h1>
+<% } else { %>
+    <h1><%=poll.name%></h1>
+    
+    <form action="" method="post">
+        <% for (id in poll.options) { %>
+            <% const option = poll.options[id] %>
+            <button type="button">
+                <label>
+                    <input type="radio" name="optionId" value="<%=id%>"><%=option.text%></input>
+                </label>
+            </button>
+        <% } %>
 
-<form action="" method="post">
-    <% for (id in poll.options) { %>
-        <% const option = poll.options[id] %>
-        <button type="button">
-            <label>
-                <input type="radio" name="optionId" value="<%=id%>"><%=option.text%></input>
-            </label>
-        </button>
-    <% } %>
-    <button type="submit"></button>
-</form>
+        <% if (error != undefined) { %>
+            <p id="error"><%=error%></p>
+        <% } %>
+        <button type="submit"></button>
+    </form>
+<% } %>
 
 <%- include('common/footer'); -%>

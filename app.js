@@ -19,7 +19,7 @@ try {
     const pollsFile = fs.readFileSync(path.join(__dirname, 'data/polls.json'))
     app.locals.polls = JSON.parse(pollsFile)
 } catch (error) {
-    app.locals.polls = null
+    app.locals.polls = undefined
 }
 
 // declare routes
@@ -27,5 +27,6 @@ app.get('/', routes.index)
 app.get('/vote/:id', routes.voting)
 app.post('/vote/:id', routes.vote)
 app.get('/vote/:id/results', routes.results)
+app.get('*', routes.error)
 
 app.listen(port)
