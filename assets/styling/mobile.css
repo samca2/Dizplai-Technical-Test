@@ -1,0 +1,5 @@
+#wrapper {
+    grid-template-columns: 90vw;
+    grid-auto-rows: 200px;
+    gap: 5px;
+}

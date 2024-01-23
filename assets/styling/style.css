@@ -1,4 +1,39 @@
+@font-face {
+    font-family:"Outfit";
+    src: url(//localhost:3000/static/font/Outfit-VariableFont_wght.ttf) format("truetype");
+}
+
 body {
     background-image: url(//localhost:3000/static/images/background.jpg);
 }
 
+ul {
+    list-style: none;
+}
+
+h1, p {
+    font-family: "Outfit" ;
+    color: white;
+}
+
+li {
+    width: 100%;
+}
+
+:visited {
+    color: inherit;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: 60vw;
+    grid-auto-rows: 100px;
+    gap: 5px;
+    justify-content: center;
+    justify-items: center;
+}
+
+#logo {
+    max-height: 80%;
+    max-width: 100%;
+}

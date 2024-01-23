@@ -3,15 +3,14 @@
 
 <head>
     <meta charset="utf-8">
-    <!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="//localhost:3000/static/styling/style.css">
+    <link rel="stylesheet" href="//localhost:3000/static/styling/mobile.css" media="screen and (max-width: 550px)">
     <title> <%= title %> </title>
 </head>
 
 <body>
-    <% if (title != "Home") { %> 
-        <button id="return"><a href="//localhost:3000/">Return to Polls</a></button>
-    <% } %>
-    <img src="//localhost:3000/static/images/logo.png"></img>
+    <div id="wrapper">
+        <img id="logo" src="//localhost:3000/static/images/logo.png"></img>
 
-<!-- body and html are closed in common/footer.ejs -->
+<!-- body, div and html are closed in common/footer.ejs -->

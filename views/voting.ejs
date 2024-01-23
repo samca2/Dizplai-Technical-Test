@@ -3,9 +3,14 @@
 <% if (poll == undefined) { %>
     <h1>Sorry, this poll could not be found</h1>
 <% } else { %>
-    <h1><%=poll.name%></h1>
-    
+    <h1><%=poll.question%></h1>
+
     <form action="" method="post">
+
+        <% if (error != undefined) { %>
+            <p id="error"><%=error%></p>
+        <% } %>
+
         <% for (id in poll.options) { %>
             <% const option = poll.options[id] %>
             <button type="button">
@@ -15,10 +20,8 @@
             </button>
         <% } %>
 
-        <% if (error != undefined) { %>
-            <p id="error"><%=error%></p>
-        <% } %>
-        <button type="submit"></button>
+        <button type="submit">Submit Vote</button>
+        
     </form>
 <% } %>
 

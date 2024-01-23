@@ -5,7 +5,9 @@
 <% } else { %>
     <ul>
         <% for (const id in polls) { %>
-            <li><a href="/vote/<%=id%>"><%= polls[id].name %></a></li>
+            <li>
+                <p><a href="/vote/<%=id%>"><%= polls[id].name %></a>
+            </li>
         <% } %>
     </ul>
 <% } %>
