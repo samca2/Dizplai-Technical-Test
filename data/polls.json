@@ -23,7 +23,7 @@
     },
     "2" : {
         "name": "F1 World Championships Winner",
-        "question": "Which driver win the Formula One World Championship?",
+        "question": "Which driver will win the Formula One World Championship?",
         "options": {
             "1" : {
                 "text": "Max Verstappen",
