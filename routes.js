@@ -29,9 +29,20 @@ exports.vote = (req, res) => {
 }
 
 exports.results = (req, res) => {
-    const poll = req.app.locals.polls[req.params.id]
+    let poll = req.app.locals.polls[req.params.id]
     const title = poll.name + " Results"
+    const options = poll.options
 
+    // get each option's percentage share of votes
+    // TODO sort options by percent
+    voteSum = 0
+    for (id in options) {
+        voteSum += options[id].votes
+    }
 
-    res.render("results", {title : title})
+    for (id in options) {
+        options[id].percent = Math.round((options[id].votes / voteSum) * 100)
+    }
+
+    res.render("results", {title : title, options : options})
 }
