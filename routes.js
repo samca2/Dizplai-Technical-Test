@@ -13,30 +13,28 @@ exports.voting = (req, res) => {
 
 exports.vote = (req, res) => {
     const redirectUrl = req.originalUrl + "/results"
-    
+
     const pollId = req.params.id
     const optionId = req.body["optionId"]
-    
-    // check if poll does not exist
+
     const poll = req.app.locals.polls[pollId]
+    
     if (poll == undefined) {
+        // poll does not exist
         const title = poll.name
 
         res.render("voting", {title : title, poll : poll, error : undefined})
-    }
-
-    // validate form submission 
-    if (optionId == undefined || poll.options[optionId] == undefined ) {
+    } else if (optionId == undefined || poll.options[optionId] == undefined ) {
+        // form is invalid
         const title = poll.name
         const errorMsg = "Please select an option"
 
         res.render("voting", {title : title, poll : poll, error : errorMsg})
-    }
-    
-    // increment votes for selected option of current poll
-    req.app.locals.polls[pollId].options[optionId].votes += 1
+    } else {
+        req.app.locals.polls[pollId].options[optionId].votes += 1
 
-    res.redirect(redirectUrl)
+        res.redirect(redirectUrl)
+    }
 }
 
 exports.results = (req, res) => {
